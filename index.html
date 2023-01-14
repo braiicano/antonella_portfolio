@@ -5,33 +5,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/static/styles/style.css">
+    <link rel="stylesheet" href="src/components/style.css">
+    <script defer src="src/main.js"></script>
     <title>Antonella Churruarin</title>
 </head>
 
 <body>
-    <div class="container d-flex justify-content-center">
+    <div class="container d-flex justify-content-center" id="main">
         <div class="card border-primary my-3" style="max-width: 60rem;">
             <div class="card-header">Diseño y marketing</div>
             <div class="card-body d-flex">
-                <div class="container-sm"><img src="src/static/profile-pic.png" alt="Antonella Churruarin"
-                        width="350px">
+                <div class="container-sm box-img"><img src="src/static/profile-pic.png" alt="Antonella Churruarin">
                 </div>
                 <div class="container-lg">
                     <h4 class="card-title">Antonella Churruarin</h4>
                     <p class="card-text">La identidad visual es uno de los conceptos mas importantes a dominar, ya que
                         tendemos a relacionar nuestros sentidos con emociones. <i>Te ayudo con eso.</i></p>
-                    <div class="d-grid gap-2">
-                        <button type="button" class="btn btn-link btn-lg effect">Mi blog</button>
-                        <button type="button" class="btn btn-link btn-lg effect">Servicios</button>
-                        <button type="button" class="btn btn-link btn-lg effect">Acerca de mi</button>
-                        <button type="button" class="btn btn-link btn-lg effect">Contactos</button>
+                    <div class="d-grid gap-2" id="btn">
+                        <button type="button" class="btn btn-link btn-lg effect" tag="_blog">Mi blog</button>
+                        <button type="button" class="btn btn-link btn-lg effect" tag="_serv">Servicios</button>
+                        <button type="button" class="btn btn-link btn-lg effect" tag="_about">Acerca de mi</button>
+                        <button type="button" class="btn btn-link btn-lg effect" tag="_contact">Contactos</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+    <!-- Services -->
+    <div id="content">
+        <section class="container" id="_serv">
+            <button class="btn btn-secondary btn-sm">X</button>
+            <h1> todos los servicios </h1>
+        </section>
+        <!-- Aboutme -->
+        <section class="container" id="_about">
+            <button class="btn btn-secondary btn-sm">X</button>
+            <h1> todo acerca de mi </h1>
+        </section>
+        <!-- Contact -->
+        <section class="container" id="_contact">
+            <button class="btn btn-secondary btn-sm">X</button>
+            <h1>los medios de contacto </h1>
+        </section>
+        <!-- Blog -->
+        <section class="container" id="_blog">
+            <button class="btn btn-secondary btn-sm">X</button>
+            <h1> el blog </h1>
+        </section>
+    </div>
 </body>
 
 </html>
