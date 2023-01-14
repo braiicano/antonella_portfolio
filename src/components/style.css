@@ -1936,4 +1936,7 @@ section > button {
     display: flex;
     margin: auto;
   }
+  body {
+    height: 95vh;
+  }
 }
