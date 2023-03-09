@@ -6,53 +6,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/components/style.css">
-    <script defer src="src/main.js"></script>
-    <title>Antonella Churruarin</title>
+    <script src="src/main.js" defer type="module"></script>
+    <title>Antonella's portfolio</title>
 </head>
 
 <body>
-    <div class="container d-flex justify-content-center" id="main">
-        <div class="card border-primary my-3" style="max-width: 60rem;">
-            <div class="card-header">Diseño y marketing</div>
-            <div class="card-body d-flex">
-                <div class="container-sm box-img"><img src="src/static/profile-pic.png" alt="Antonella Churruarin">
-                </div>
-                <div class="container-lg">
-                    <h4 class="card-title">Antonella Churruarin</h4>
-                    <p class="card-text">La identidad visual es uno de los conceptos mas importantes a dominar, ya que
-                        tendemos a relacionar nuestros sentidos con emociones. <i>Te ayudo con eso.</i></p>
-                    <div class="d-grid gap-2" id="btn">
-                        <button type="button" class="btn btn-link btn-lg effect" tag="_blog">Mi blog</button>
-                        <button type="button" class="btn btn-link btn-lg effect" tag="_serv">Servicios</button>
-                        <button type="button" class="btn btn-link btn-lg effect" tag="_about">Acerca de mi</button>
-                        <button type="button" class="btn btn-link btn-lg effect" tag="_contact">Contactos</button>
-                    </div>
-                </div>
-            </div>
+    <nav id="navbar">
+        <div class="navbar__title"><a href="#whoami">Antonella Churruarin</a></div>
+        <div class="navbar__menu">
+            <div class="navbar__button" id="btn_menu"></div>
+            <ul class="navbar__list" id="list_menu">
+                <li class="menu__item1"><a href="#whoami">Quién soy?</a></li>
+                <li class="menu__item2"><a href="#myservices">Mis servicios</a></li>
+                <li class="menu__item3"><a href="#myproyects">Mis proyectos</a></li>
+                <li class="menu__item4"><a href="#contacts">Canales de contacto</a></li>
+                <li class="menu__item5"><a class="unavailable" href="#unavailable">Blog</a></li>
+            </ul>
         </div>
-    </div>
-    <!-- Services -->
-    <div id="content">
-        <section class="container" id="_serv">
-            <button class="btn btn-secondary btn-sm">X</button>
-            <h1> todos los servicios </h1>
-        </section>
-        <!-- Aboutme -->
-        <section class="container" id="_about">
-            <button class="btn btn-secondary btn-sm">X</button>
-            <h1> todo acerca de mi </h1>
-        </section>
-        <!-- Contact -->
-        <section class="container" id="_contact">
-            <button class="btn btn-secondary btn-sm">X</button>
-            <h1>los medios de contacto </h1>
-        </section>
-        <!-- Blog -->
-        <section class="container" id="_blog">
-            <button class="btn btn-secondary btn-sm">X</button>
-            <h1> el blog </h1>
-        </section>
-    </div>
+    </nav>
+    <main>
+        <div class="container">
+            <section id="whoami">
+                <div class="profile-photo"></div>
+                <div class="profile-info">
+                    <p>La identidad visual es uno de los conceptos más importantes a dominar , ya que tendemos a
+                        relacionar nuestros sentidos con emociones. Te ayudo con ello.</p>
+                </div>
+            </section>
+            <section id="myservices">
+                <div class="">
+                    <h3>Diseño gráfico</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi praesentium labore nostrum
+                        atque, quia laudantium quam ab provident quaerat. Rerum et maxime ab ex saepe temporibus sit
+                        amet debitis perferendis!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Consequatur laborum voluptatibus nulla modi ex incidunt dolores corporis. Aliquam assumenda
+                        porro harum modi eligendi, quam itaque soluta aliquid? Fugiat, odit expedita!</p>
+                </div>
+                <div class="">
+                    <h3>Marketing digital</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt blanditiis nisi, provident
+                        numquam similique ad earum mollitia fuga iure. Necessitatibus ut, atque reiciendis nihil ducimus
+                        accusamus aperiam suscipit voluptates excepturi. Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Nam cum quae eos quod ducimus dolor cumque aspernatur, itaque sed vel culpa
+                        neque voluptatum fugiat odit, rem harum vero perferendis temporibus?</p>
+                </div>
+            </section>
+            <section id="myproyects">
+                <h3 class="default">Mis proyectos</h3>
+                <div class="default">
+                    <ul class="tab">
+                        <li class="tab-item">Proyecto A <a href="#">Link</a></li>
+                        <li class="tab-item">Proyecto B <a href="#">Link</a></li>
+                        <li class="tab-item">Proyecto C <a href="#">Link</a></li>
+                        <li class="tab-item">Proyecto D <a href="#">Link</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section id="contacts">
+                <div class="flex-center">
+                    <h1 class="title">Canales de contacto</h1>
+                    <h2 class="default flex-center">Encontrame instagram <a target="_blank"
+                            href="http://www.instagram.com/churruarinantonella"><i class="icon i-instagram"></i></a>
+                    </h2>
+                    <h2 class="default flex-center">Escribime al correo <a target="_blank"
+                            href="mailto:antonellachurruarin@gmail.com"><i class="icon i-gmail"></i></a></h2>
+                </div>
+            </section>
+            <section id="unavailable">
+                <div class="default"><h2>Esperá, aún hay más...</h2></div>
+                <div class="default">
+                    <h4>Estoy preparando algo nuevo para la comunidad</h4>
+                    <p>Muy pronto vas a poder ser parte de un movimiento grandioso que va a cambiar la forma de ver y
+                        aprender estos temas.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer id="footer">
+        <p>All rigth reserved, created by <a href="http://www.braiidev.com" target="_blank">Braiidev</a></p>
+    </footer>
 </body>
 
 </html>

@@ -1,16 +1,8 @@
-const btns = document.querySelector("#btn");
-const content = document.querySelector("#content");
+const menuButton = document.getElementById("btn_menu");
+const menuList = document.getElementById("list_menu");
 
-btns.addEventListener("click", (e) => {
-  const { target: btn } = e;
-  const { value: sect } = btn.attributes.tag;
-  const selSect = document.getElementById(sect);
-  //   console.log(selSect);
-  selSect.style.top = "1rem";
-});
-content.addEventListener("click", (e) => {
-  const { target: btn } = e;
-  let sect;
-  if (btn.tagName === "BUTTON") sect = btn.parentNode;
-  if (sect) sect.style.top = "120%";
+menuButton.addEventListener("click", (e) => {
+  //   console.log(e.target);
+  menuList.classList.toggle("active");
+  menuButton.classList.toggle("active");
 });
