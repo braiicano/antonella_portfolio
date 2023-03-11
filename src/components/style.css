@@ -1,7 +1,8 @@
 /* General */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap");
 :root {
   /* Border */
-  --border: 0.5px solid var(--color-x1);
+  /* --border: 0.5px solid var(--color-x1); */
   /* Time */
   --x1-time: 0.25s;
   --x2-time: 0.35s;
@@ -17,27 +18,29 @@
   --x8-size: 64px;
   --x10-size: 80px;
   /* Font style */
-  --font-type: Monospace;
-  --font-color-ligth: #121212;
-  --font-color-dark: #efefef;
+  --font-type: "Noto Serif JP", serif;
+  --font-color-default: #fff;
+  --font-color-border: #b6e;
   --font-color-highligth: #b630c2;
-  --font-color-hover: #6f00ff;
+  --font-color-hover: #cca4ff;
   --unavailable: #afafaf;
   /* Colors */
   --background: #020202;
   --backgroud-hover: #353535;
   --color-x1: #1e0063;
-  --color-x2: #421e94;
-  --color-x3: #4c0063;
-  --color-x4: #b04cf3;
+  --color-x2: #7b069e;
+  --color-x3: #9207bc;
+  --color-x4: #c06cd9;
   --color-x5: #e208ff;
-  --color-x6: #0066ff;
+  --color-x6: #5d99f3;
 }
 * {
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  color: var(--font-color-ligth);
+  color: var(--font-color-default);
+  text-shadow: 1px 0 var(--font-color-border), -1px 0 var(--font-color-border),
+    0 1px var(--font-color-border), 0 -1px var(--font-color-border);
   scroll-behavior: smooth;
 }
 *::-webkit-scrollbar {
@@ -46,11 +49,15 @@
   height: var(--half-size);
 }
 *::-webkit-scrollbar-thumb {
-  background-color: var(--color-x3);
+  background-color: var(--color-x5);
   border-radius: var(--half-size);
 }
 p {
   text-align: justify;
+}
+html {
+  background-color: var(--color-x3);
+  overflow: hidden;
 }
 body {
   max-width: 1366px;
@@ -113,7 +120,7 @@ body {
   border: var(--border);
   display: flex;
   justify-content: space-between;
-  background-color: #e208ff;
+  background-color: var(--color-x3);
   font-weight: bold;
 }
 .navbar__title {
@@ -138,8 +145,12 @@ body {
 .navbar__menu ul li a:target {
   color: var(--font-color-hover);
 }
-a:hover {
-  color: var(--font-color-hover);
+a {
+  transition-duration: var(--x2-time);
+}
+a:hover:not(.unavailable) {
+  /* color: var(--font-color-hover); */
+  text-shadow: 0 0 2rem var(--color-x6);
 }
 
 /* Main */
@@ -166,16 +177,16 @@ main .container section {
   scroll-snap-align: center;
 }
 main .container section:nth-child(2n) {
-  background: linear-gradient(to left, var(--color-x6), var(--color-x4));
+  background: linear-gradient(to left, var(--color-x5), var(--color-x6));
 }
 main .container section:not(:nth-child(2n)) {
-  background: linear-gradient(to left, var(--color-x4), var(--color-x6));
+  background: linear-gradient(to left, var(--color-x6), var(--color-x5));
 }
 main .container section div {
   width: 500px;
   padding: var(--x2-size);
 }
-main .container #whoami .profile-photo {
+main .container #whoiam .profile-photo {
   width: 55%;
   max-width: 500px;
   height: 55%;
@@ -185,7 +196,7 @@ main .container #whoami .profile-photo {
   background-repeat: no-repeat;
   filter: drop-shadow(0 0 0.5rem var(--backgroud-hover));
 }
-main .container #whoami .profile-info {
+main .container #whoiam .profile-info {
   min-width: 500px;
   width: 50%;
   padding: var(--x2-size);
@@ -208,7 +219,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #b630c2;
+  background-color: var(--color-x2);
   font-weight: bold;
 }
 /* Mobile */
@@ -228,7 +239,7 @@ footer {
     content: "";
     width: var(--x6-size);
     height: var(--half-size);
-    background-color: var(--background);
+    background-color: var(--color-x4);
     border-radius: var(--x2-size);
     transition-duration: var(--x2-time);
   }
@@ -239,9 +250,11 @@ footer {
     position: absolute;
     bottom: var(--x2-size);
   }
-  .navbar__button:hover {
+  .navbar__button:hover,
+  .navbar__button:hover::after,
+  .navbar__button:hover::before {
     cursor: pointer;
-    background-color: var(--backgroud-hover);
+    background-color: var(--color-x6);
   }
   .navbar__button.active {
     background-color: transparent;
@@ -255,6 +268,8 @@ footer {
     /* top: 0; */
   }
   .navbar__menu ul {
+    display: inherit;
+    z-index: 10;
     height: max-content;
     flex-direction: column;
     gap: var(--x3-size);
@@ -265,7 +280,7 @@ footer {
     padding: var(--x2-size) var(--half-size);
     text-align: center;
     border: var(--border);
-    background-color: var(--font-color-dark);
+    background-color: var(--color-x3);
   }
   .navbar__menu ul.active {
     right: 0 !important;
