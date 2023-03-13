@@ -56,9 +56,12 @@
   width: var(--half-size);
   height: var(--half-size);
 }
-*::-webkit-scrollbar-thumb{
+*::-webkit-scrollbar-thumb {
   background-color: var(--color-x0);
   border-radius: var(--x3-size);
+}
+*::-webkit-scrollbar-corner{
+  background-color: transparent;
 }
 a {
   text-decoration: none;
@@ -112,7 +115,7 @@ body {
   border-top-right-radius: inherit;
   border-bottom-right-radius: inherit;
   background: var(--color-x5);
-  width: 150px;
+  min-width: 150px;
 }
 .menu__item,
 .menu__item > a {
@@ -180,8 +183,10 @@ body {
 }
 #main .container section#myservices {
   justify-content: center;
-  align-items: center;
+  align-items: start;
   gap: var(--x2-size);
+  flex-wrap: wrap;
+  overflow: scroll;
 }
 #main .container section#myservices * {
   margin: var(--x3-size);
@@ -196,8 +201,9 @@ body {
 }
 #main .container section#unavailable {
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  gap: var(--x4-size);
 }
 /* Default options */
 .flex-order {
@@ -224,31 +230,36 @@ body {
 }
 .i-stop {
   background-image: url("../static/stop.png");
+  width: 80px !important;
+  height: 80px !important;
 }
 .image-content {
+  height: auto;
+  background: var(--color-x4);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   filter: drop-shadow(0 0 1rem var(--color-x2));
   border-radius: var(--x2-size);
 }
+.w100{
+  width: 100% !important;
+}
+/*
 #design {
-  background-image: linear-gradient(#c0bf, #fff0), url("../static/design.jpg");
+  background-image: linear-gradient(#c0bf, #c0b7), url("../static/design.jpg");
   height: 75%;
-  animation: var(--animate);
 }
 #marketing {
-  background-image: linear-gradient(#c0bf, #fff0),
+  background-image: linear-gradient(#c0bf, #c0b7),
     url("../static/marketing.jpg");
   height: 75%;
-  animation: var(--animate);
-  animation-delay: var(--x2-time);
-}
+} */
 .text-center {
   text-align: center;
 }
 .default {
-  width: 400px;
+  width: 350px;
 }
 .tab {
   width: 100%;
@@ -265,6 +276,14 @@ body {
 }
 .tab-item > a:hover {
   animation: var(--animate-hover);
+}
+.list-item {
+  font-weight: bold;
+  padding-left: 1.5rem;
+  background-image: url("../static/star.png");
+  background-position: 0 0;
+  background-size: 7%;
+  background-repeat: no-repeat;
 }
 /* Glow effect */
 .geff {
@@ -376,30 +395,49 @@ body {
     font-size: 100%;
   }
   #navbar {
-    width: 100px;
+    font-size: 100%;
+    min-width: 60px;
     text-align: center;
+  }
+  #main .container section{
+    text-align:left;
   }
   #main .container section#uotro {
     text-align: center;
+  }
+  #main .container section#whoiam {
+    text-overflow: ellipsis;
   }
   #main .container section#whoiam .profile-photo {
     display: none;
   }
   #main .container section#myproyects {
     flex-direction: column;
-    gap: 5%;
+    gap: 1%;
+  }
+  #main .container section#myproyects div.default{
+    overflow: scroll;
   }
   #main .container section#myservices {
     flex-wrap: wrap;
     overflow-y: scroll;
   }
-
+  #main .container section#myservices *{
+    margin: var(--default-size)
+  }
+  .geff:hover{
+    font-size: 100%;
+  }
   .profile-photo {
     min-width: 100px;
     min-height: 100px;
   }
   .default {
     width: auto;
+    height: auto;
     padding: var(--half-size);
+  }
+  .tab{
+    justify-content: center;
   }
 }
