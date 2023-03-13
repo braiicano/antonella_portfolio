@@ -10,39 +10,30 @@
     <title>Antonella's portfolio</title>
 </head>
 
-<body>
+<body class="">
+    <h1 id="title"><a href="#uotro">Antonella Churruarin</a></h1>
     <nav id="navbar">
-        <div class="navbar__title"><a href="#whoiam">Antonella Churruarin</a></div>
-        <div class="navbar__menu">
-            <div class="navbar__button" id="btn_menu"></div>
-            <ul class="navbar__list" id="list_menu">
-                <li class="menu__item1"><a href="#whoiam">Quién soy?</a></li>
-                <li class="menu__item2"><a href="#myservices">Mis servicios</a></li>
-                <li class="menu__item3"><a href="#myproyects">Mis proyectos</a></li>
-                <li class="menu__item4"><a href="#contacts">Canales de contacto</a></li>
-                <li class="menu__item5"><a class="unavailable" href="#unavailable">Blog</a></li>
-            </ul>
-        </div>
+        <li class="menu__item geff"><a href="#whoiam">Acerca de mí</a></li>
+        <li class="menu__item geff"><a href="#myproyects">Mis proyectos</a></li>
+        <li class="menu__item geff"><a href="#myservices">Mis servicios</a></li>
+        <li class="menu__item geff"><a href="#contacts">Contacto</a></li>
+        <li class="menu__item geff"><a class="unavailable" href="#unavailable">Blog</a></li>
     </nav>
-    <main>
+    <main id="main">
         <div class="container">
+            <section id="uotro">
+                <div class="profile-photo"></div>
+                <h2>Marketing digital y Diseño para redes sociales</h2>
+            </section>
             <section id="whoiam">
                 <div class="profile-photo"></div>
-                <div class="profile-info">
-                    <p>La identidad visual es uno de los conceptos más importantes a dominar , ya que tendemos a
-                        relacionar nuestros sentidos con emociones.</p>
-                    <p>Destaco por identificar tus aptitudes y poder plasmarlas en un diseño que te identifique</p>
-                </div>
-            </section>
-            <section id="myservices">
-                <div class="">
-                    <h3>Diseño gráfico</h3>
-                    <p><b>Experta</b> en branding, rebranding y creación de marca <em>personal</em></p>
-                    <p></p>
-                </div>
-                <div class="">
-                    <h3>Marketing digital</h3>
-                    <p>Planificación y proceso es lo que se necesita para avanzar y alcanzar a potenciales clientes</p>
+                <div class="default">
+                    <p>Soy una mujer <b>emprendedora</b> y <b>autodidacta</b> en Marketing Digital y Diseño Gráfico
+                        orientado a redes
+                        sociales y marca personal, trabajo de manera <em>freelance</em> en proyectos a corto y mediano
+                        plazo.</p>
+                    <p>Experta en plasmar tu identidad en un diseño único y atractivo, capaz de transformar
+                        las ideas expuestas en una imagen que se adapte con tu emprendimiento y producto.</p>
                 </div>
             </section>
             <section id="myproyects">
@@ -56,19 +47,30 @@
                     </ul>
                 </div>
             </section>
+            <section id="myservices">
+                <div class="default image-content" id="design">
+                    <h3 class="text-center">Diseño gráfico</h3>
+                    <p><b>Experta</b> en branding, rebranding y creación de marca <em>personal</em></p>
+                    <p></p>
+                </div>
+                <div class="default image-content" id="marketing">
+                    <h3 class="text-center">Marketing digital</h3>
+                    <p>Planificación y proceso es lo que se necesita para avanzar y alcanzar a potenciales clientes</p>
+                </div>
+            </section>
             <section id="contacts">
-                <div class="flex-center">
-                    <h1 class="title">Canales de contacto</h1>
-                    <h2 class="default flex-center">Encontrame instagram <a target="_blank"
+                <div class="default">
+                    <h1 class="text-center">Canales de contacto</h1>
+                    <h2 class="flex-order">Encontrame en instagram <a target="_blank"
                             href="http://www.instagram.com/churruarinantonella"><i class="icon i-instagram"></i></a>
                     </h2>
-                    <h2 class="default flex-center">Escribime al correo <a target="_blank"
+                    <h2 class="flex-order">Escribime al correo <a target="_blank"
                             href="mailto:antonellachurruarin@gmail.com"><i class="icon i-gmail"></i></a></h2>
                 </div>
             </section>
             <section id="unavailable">
-                <div class="default">
-                    <h2>Esperá, aún hay más...</h2>
+                <div class="default text-center">
+                    <h2 class="flex-order">Esperá, aún hay más...<span class="icon i-stop"></span></h2>
                 </div>
                 <div class="default">
                     <h4>Estoy preparando algo nuevo para la comunidad</h4>
@@ -78,9 +80,6 @@
             </section>
         </div>
     </main>
-    <footer id="footer">
-        <p>All rigth reserved, created by <a href="http://www.braiidev.com" target="_blank">Braiidev</a></p>
-    </footer>
 </body>
 
 </html>
