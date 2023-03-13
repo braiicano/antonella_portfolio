@@ -60,7 +60,7 @@
   background-color: var(--color-x0);
   border-radius: var(--x3-size);
 }
-*::-webkit-scrollbar-corner{
+*::-webkit-scrollbar-corner {
   background-color: transparent;
 }
 a {
@@ -93,6 +93,7 @@ body {
     "main  navbar" auto;
   font-family: var(--font-type);
   font-size: var(--x2-size);
+  animation: entrance var(--x4-time) cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 /* Title */
 #title {
@@ -206,11 +207,17 @@ body {
   gap: var(--x4-size);
 }
 /* Default options */
+.text-color {
+  color: var(--background);
+}
 .flex-order {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.flex-start {
+  align-self: flex-start;
 }
 .icon {
   display: inline-block;
@@ -225,8 +232,16 @@ body {
 .i-instagram {
   background-image: url("../static/instagram.png");
 }
+.i-instagram::after {
+  content: "@churruarinantonella";
+  padding-left: 110%;
+}
 .i-gmail {
   background-image: url("../static/gmail.png");
+}
+.i-gmail::after {
+  content: "antonellachurruarin@gmail.com";
+  padding-left: 110%;
 }
 .i-stop {
   background-image: url("../static/stop.png");
@@ -242,19 +257,9 @@ body {
   filter: drop-shadow(0 0 1rem var(--color-x2));
   border-radius: var(--x2-size);
 }
-.w100{
+.w100 {
   width: 100% !important;
 }
-/*
-#design {
-  background-image: linear-gradient(#c0bf, #c0b7), url("../static/design.jpg");
-  height: 75%;
-}
-#marketing {
-  background-image: linear-gradient(#c0bf, #c0b7),
-    url("../static/marketing.jpg");
-  height: 75%;
-} */
 .text-center {
   text-align: center;
 }
@@ -389,7 +394,16 @@ body {
       drop-shadow(0.01rem -0.01rem 0.05rem var(--color-x5));
   }
 }
-
+@keyframes entrance {
+  0% {
+    transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
 @media screen and (width<700px) {
   * {
     font-size: 100%;
@@ -399,8 +413,8 @@ body {
     min-width: 60px;
     text-align: center;
   }
-  #main .container section{
-    text-align:left;
+  #main .container section {
+    text-align: left;
   }
   #main .container section#uotro {
     text-align: center;
@@ -415,17 +429,17 @@ body {
     flex-direction: column;
     gap: 1%;
   }
-  #main .container section#myproyects div.default{
+  #main .container section#myproyects div.default {
     overflow: scroll;
   }
   #main .container section#myservices {
     flex-wrap: wrap;
     overflow-y: scroll;
   }
-  #main .container section#myservices *{
-    margin: var(--default-size)
+  #main .container section#myservices * {
+    margin: var(--default-size);
   }
-  .geff:hover{
+  .geff:hover {
     font-size: 100%;
   }
   .profile-photo {
@@ -437,7 +451,7 @@ body {
     height: auto;
     padding: var(--half-size);
   }
-  .tab{
+  .tab {
     justify-content: center;
   }
 }
